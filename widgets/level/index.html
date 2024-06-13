@@ -7,16 +7,26 @@
     <link rel="stylesheet" href="styles.css" />
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const BAR1_COLOR = "#00ffff";
+            const BAR2_COLOR = "#ff00ff";
+
             const urlParams = new URLSearchParams(window.location.search);
             const username = urlParams.get('username') || "Попаданец";
             const avatarUrl = urlParams.get('avatar') || "https://s1.zerochan.net/icons/avatar4.png";
-            const exp1 = parseInt(urlParams.get('exp1')); const exp2 = parseInt(urlParams.get('exp2'));
-            const goal1 = parseInt(urlParams.get('goal1')); const goal2 = parseInt(urlParams.get('goal2'));
-            //
+            const exp1 = parseInt(urlParams.get('exp1') || '0'); const exp2 = parseInt(urlParams.get('exp2') || '0');
+            const goal1 = parseInt(urlParams.get('goal1') || '0'); const goal2 = parseInt(urlParams.get('goal2') || '0');
+            const level = parseInt(urlParams.get('level') || '0');
+
             document.getElementById('username').innerText = username;
             document.getElementById('avatar').src = avatarUrl;
+            
+            document.getElementById('progress1').style.backgroundColor = BAR1_COLOR;
+            document.getElementById('progress2').style.backgroundColor = BAR2_COLOR;
             document.getElementById('progress1').style.width = `${exp1/goal1*100}%`;
             document.getElementById('progress2').style.width = `${exp2/goal2*100}%`;
+            
+            document.getElementById('level').innerText = "LVL"+level;
+            document.getElementById('level').style.backgroundColor = BAR1_COLOR;
         });
     </script>
     <title> User Card </title>
@@ -25,12 +35,15 @@
 <body>
     <div class="user-card">
         <div class="container" style="width: 25%;">
-            <img id="avatar" class="avatar"
+            <img id="avatar" class="avatar-display"
                 src=""
                 alt="Avatar here" />
         </div>
         <div class="container" style="width: 75%;">
-            <div id="username" class="username"></div>
+            <div class="header">
+                <div id="username" class="username-display"></div>
+                <div id="level" class="level-display">LVL17</div>
+            </div>
             <div class="progress-bar">
                 <div id="progress1" class="progress-fill"></div>
             </div>

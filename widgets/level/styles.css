@@ -1,11 +1,17 @@
+:root {
+    --bar1-color: #00ffff;
+    --bar2-color: #ff00ff;
+    --bar-default-color: salmon;
+}
+
 .user-card {
     /* Metrics */
     width: 512px;
     height: 128px;
-    border: 10px dashed;
+    border: 10px solid;
     /* Visual */
-    background-color: #3d3d3d;
-    border-color: #1b1b1b;
+    background-color: #454545;
+    border-color: #636363;
     /* Alignment */
     display: inline-flex;
     align-items: stretch;
@@ -15,11 +21,22 @@
     /* Alignment */
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.avatar {
+.header {
+    /* Measurements */
+    width: 95%;
+    /* Alignment */
+    display: inline-flex;
+    align-items: center stretch;
+    justify-content: space-between;
+    /* Visual */
+    overflow: hidden;
+}
+
+.avatar-display {
     /* Metrics */
     width: 90%;
     height: 90%;
@@ -32,12 +49,34 @@
     border-color: white;
 }
 
-.username {
+.username-display {
+    /* Measurements */
+    width: fit-content;
+    margin: 1%;
     /* Text */
     color: white;
     font-size: x-large;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Visual */
+    overflow: hidden;
+}
+
+.level-display {
+    /* Measurements */
+    width: fit-content;
+    margin: 1%;
+    /* Text */
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Visual */
+    background-color: var(--bar-default-color);
+    /* Border */
+    border-radius: 10px;
+    /* Alignment */
+    align-self: center;
 }
 
 .progress-bar {
@@ -58,5 +97,5 @@
     /* Border */
     border-radius: 50px;
     /* Visual */
-    background-color: aqua;
+    background-color: var(--bar-default-color);
 }
