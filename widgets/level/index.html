@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const BAR1_COLOR = "#00ffff";
-            const BAR2_COLOR = "#ff00ff";
+            //const BAR1_COLOR = "#00ffff";
+            //const BAR2_COLOR = "#ff00ff";
 
             const urlParams = new URLSearchParams(window.location.search);
             const username = urlParams.get('username') || "Попаданец";
@@ -19,14 +19,12 @@
 
             document.getElementById('username').innerText = username;
             document.getElementById('avatar').src = avatarUrl;
-            
-            document.getElementById('progress1').style.backgroundColor = BAR1_COLOR;
-            document.getElementById('progress2').style.backgroundColor = BAR2_COLOR;
-            document.getElementById('progress1').style.width = `${exp1/goal1*100}%`;
-            document.getElementById('progress2').style.width = `${exp2/goal2*100}%`;
-            
-            document.getElementById('level').innerText = "LVL"+level;
-            document.getElementById('level').style.backgroundColor = BAR1_COLOR;
+
+            document.getElementById('progress1').style.width = `${exp1 / goal1 * 100}%`;
+            document.getElementById('progress2').style.width = `${exp2 / goal2 * 100}%`;
+
+            document.getElementById('level').innerText = "LVL" + level;
+
         });
     </script>
     <title> User Card </title>
@@ -34,21 +32,19 @@
 
 <body>
     <div class="user-card">
-        <div class="container" style="width: 25%;">
-            <img id="avatar" class="avatar-display"
-                src=""
-                alt="Avatar here" />
+        <div class="pfp_block">
+        <img id="avatar" class="avatar-display" src="" alt=" " />
         </div>
-        <div class="container" style="width: 75%;">
+        <div class="info_block">
             <div class="header">
                 <div id="username" class="username-display"></div>
-                <div id="level" class="level-display">LVL17</div>
+                <div id="level" class="level-display" style="background-color: royalblue"></div>
             </div>
             <div class="progress-bar">
-                <div id="progress1" class="progress-fill"></div>
+                <div id="progress1" class="progress-fill" style="background-color: #48389a;"></div>
             </div>
             <div class="progress-bar">
-                <div id="progress2" class="progress-fill"></div>
+                <div id="progress2" class="progress-fill" style="background-color: /*#ff36dd*/#9487d4;"></div>
             </div>
         </div>
     </div>

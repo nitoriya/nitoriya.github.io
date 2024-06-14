@@ -1,39 +1,45 @@
-:root {
-    --bar1-color: #00ffff;
-    --bar2-color: #ff00ff;
-    --bar-default-color: salmon;
-}
-
 .user-card {
     /* Metrics */
     width: 512px;
     height: 128px;
-    border: 10px solid;
-    /* Visual */
-    background-color: #454545;
-    border-color: #636363;
     /* Alignment */
     display: inline-flex;
     align-items: stretch;
+    /* Visual */
+    background-image: url('https://media.discordapp.net/attachments/1123708358004834396/1251163267825405952/042097c56404d025c0c266b21a5fb0c46f8b320c.png?ex=666d9418&is=666c4298&hm=44d315e25dad89acca04120b362703a61dc45dd1d93e62ab01dbb19ad167bad7&=&format=webp&quality=lossless&width=512&height=386');
+    background-blend-mode: overlay;
+    /* Colors */
+    background-color: #00000080;
+
 }
 
-.container {
+.pfp_block {
+    width: 25%; 
     /* Alignment */
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
 }
+
+.info_block {
+    width: 75%;
+     /* Alignment */
+     display: flex;
+     flex-wrap: wrap;
+     align-items: flex-start;
+     justify-content: space-evenly;
+}
+
 
 .header {
     /* Measurements */
     width: 95%;
+    height: 30%;
     /* Alignment */
     display: inline-flex;
-    align-items: center stretch;
+    align-items: center;
+    text-align: center;
     justify-content: space-between;
-    /* Visual */
-    overflow: hidden;
 }
 
 .avatar-display {
@@ -42,41 +48,41 @@
     height: 90%;
     margin: 5%;
     /* Border */
-    box-sizing: border-box;
     border-radius: 50%;
-    border-style: outset;
-    border-width: 5px;
-    border-color: white;
+    /* Shadow */
+    box-shadow: 0 0 15px 0px white;
 }
 
 .username-display {
     /* Measurements */
     width: fit-content;
+    height: auto;
     margin: 1%;
+    margin-left: 0;
     /* Text */
-    color: white;
-    font-size: x-large;
+    font-size: 120%;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* Visual */
     overflow: hidden;
+    /* Colors */
+    color: white;
 }
 
 .level-display {
     /* Measurements */
     width: fit-content;
+    padding: 1%;
     margin: 1%;
+    margin-right: 0;
     /* Text */
-    color: white;
     font-size: small;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* Visual */
-    background-color: var(--bar-default-color);
     /* Border */
     border-radius: 10px;
-    /* Alignment */
-    align-self: center;
+    /* Colors */
+    color: white;
 }
 
 .progress-bar {
@@ -84,10 +90,14 @@
     width: 95%;
     height: 20%;
     /* Border */
-    overflow: hidden;
+    border: 1px solid #ffffff94;
     border-radius: 50px;
     /* Visual */
-    background-color: grey;
+    background-blend-mode: overlay;
+    /* Colors */
+    background-color: #00000080;
+    /* Shadow */
+    box-shadow: 0 0 1px 0 white;
 }
 
 .progress-fill {
@@ -97,5 +107,5 @@
     /* Border */
     border-radius: 50px;
     /* Visual */
-    background-color: var(--bar-default-color);
+    background-color: navajowhite;
 }
