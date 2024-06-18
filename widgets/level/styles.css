@@ -1,111 +1,104 @@
-.user-card {
-    /* Metrics */
-    width: 512px;
-    height: 128px;
-    /* Alignment */
-    display: inline-flex;
-    align-items: stretch;
-    /* Visual */
-    background-image: url('https://media.discordapp.net/attachments/1123708358004834396/1251163267825405952/042097c56404d025c0c266b21a5fb0c46f8b320c.png?ex=666d9418&is=666c4298&hm=44d315e25dad89acca04120b362703a61dc45dd1d93e62ab01dbb19ad167bad7&=&format=webp&quality=lossless&width=512&height=386');
-    background-blend-mode: overlay;
-    /* Colors */
-    background-color: #00000080;
-
+:root {
+    --p1-color: #48389a;
+    --p2-color: #9487d4;
 }
 
-.pfp_block {
-    width: 25%; 
-    /* Alignment */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+    background-color: rgba(30, 30, 30, 1);
 }
 
-.info_block {
-    width: 75%;
-     /* Alignment */
-     display: flex;
-     flex-wrap: wrap;
-     align-items: flex-start;
-     justify-content: space-evenly;
-}
-
-
-.header {
-    /* Measurements */
-    width: 95%;
-    height: 30%;
-    /* Alignment */
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-}
-
-.avatar-display {
-    /* Metrics */
-    width: 90%;
-    height: 90%;
-    margin: 5%;
-    /* Border */
-    border-radius: 50%;
-    /* Shadow */
-    box-shadow: 0 0 15px 0px white;
-}
-
-.username-display {
-    /* Measurements */
-    width: fit-content;
-    height: auto;
-    margin: 1%;
-    margin-left: 0;
-    /* Text */
-    font-size: 120%;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* Visual */
-    overflow: hidden;
-    /* Colors */
+.text {
     color: white;
-}
-
-.level-display {
-    /* Measurements */
-    width: fit-content;
-    padding: 1%;
-    margin: 1%;
-    margin-right: 0;
-    /* Text */
-    font-size: small;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* Border */
-    border-radius: 10px;
-    /* Colors */
-    color: white;
 }
 
 .progress-bar {
-    /* Metrics */
-    width: 95%;
-    height: 20%;
-    /* Border */
-    border: 1px solid #ffffff94;
+    display: flex;
+    overflow: hidden;
     border-radius: 50px;
-    /* Visual */
-    background-blend-mode: overlay;
-    /* Colors */
-    background-color: #00000080;
-    /* Shadow */
-    box-shadow: 0 0 1px 0 white;
+    background: #00000080;
+    _box-shadow: inset 0 0 10px 0px black;
+    _border: black solid 3px;
+    _filter: drop-shadow(0 0 2px dimgray)
 }
 
 .progress-fill {
-    /* Metrics */
-    width: 10%;
     height: 100%;
-    /* Border */
     border-radius: 50px;
-    /* Visual */
-    background-color: navajowhite;
+    
+}
+
+#card {
+    width: 1024px;
+    height: 256px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    grid-template-rows: 256px;
+    border-radius: 10px;
+    background-color: #0000009F;
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+#avatar-container {
+    display: grid;
+    place-items: center;
+}
+
+#avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 5px white);
+}
+
+#info-container {
+    padding: 25px;
+    display: grid;
+    grid-template-rows: 25% 33% 42%;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+#lvl {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: large;
+    border-radius: 10px;
+    background-color: royalblue;
+}
+
+#info {
+    font-size: 180%;
+}
+
+#name {
+    flex-grow: 1;
+    font-size: 300%;
+    overflow: hidden;
+}
+
+#progress {
+    display: grid;
+    gap: 10%;
+    grid-template-rows: 50% 50%;
+}
+
+#p1 {
+    background-color: var(--p1-color);
+    filter: drop-shadow(0 0 5px var(--p1-color));
+}
+
+#p2 {
+    background-color: var(--p2-color);
+    filter: drop-shadow(0 0 5px var(--p2-color));
 }
