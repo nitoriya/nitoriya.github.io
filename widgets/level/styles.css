@@ -13,18 +13,17 @@ div {
 
 .text {
     color: white;
-    font-weight: bold; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .highlight {
+    font-size: xx-large;
+    font-weight: bold;
     width: fit-content;
     height: fit-content;
     padding: 5px;
     margin-left: 5px;
-    font-size: xx-large;
     border-radius: 10px;
-    
 }
 
 .progress-bar {
@@ -105,24 +104,28 @@ div {
 }
 
 #info {
-    font-size: 180%;
+    font-size: 150%;
     display: grid;
+    align-items: center;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
+    padding: 2%;
 }
 
 #name {
+    font-weight: bold;
     flex-grow: 1;
     font-size: 300%;
     overflow: hidden;
 }
 
 #icon {
-    margin-right: 2%;
     width: 20px;
     height: 20px;
-    align-self: center;
     aspect-ratio: 1;
+    padding-right: 5px;
+    align-self: center;
+    overflow: hidden;
     filter: invert();
 }
 
