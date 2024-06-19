@@ -3,6 +3,7 @@
 //     furina: 'https://raw.githubusercontent.com/nitoriya/nitoriya.github.io/main/media/cards/furina.png',
 // };
 const cards = ["kazuma", "furina"];
+const cards_path = "https://raw.githubusercontent.com/nitoriya/nitoriya.github.io/main/media/cards/";
 
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         h = vc_time % (60 * 60 * 24) / (60 * 60),
         m = vc_time % (60 * 60 * 24) % (60 * 60) / 60,
         s = vc_time % (60 * 60 * 24) % (60 * 60) % 60;
-    document.getElementById('vc-time').innerText = (Math.floor(d / 10) + "" + Math.floor(d % 10)) +
+    document.getElementById('vc-time').innerText += (Math.floor(d / 10) + "" + Math.floor(d % 10)) +
         ":" + (Math.floor(h / 10) + "" + Math.floor(h % 10)) +
         ":" + (Math.floor(m / 10) + "" + Math.floor(m % 10)) +
         ":" + (Math.floor(s / 10) + "" + Math.floor(s % 10));

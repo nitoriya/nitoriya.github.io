@@ -7,6 +7,10 @@ body {
     background-color: rgba(30, 30, 30, 1);
 }
 
+div {
+    display: inline-flex;
+}
+
 .text {
     color: white;
     font-weight: bold; 
@@ -43,6 +47,14 @@ body {
     border-width: 1px;
     border-radius: 50px;
     
+}
+
+.grid-left {
+    justify-self: left;
+}
+
+.grid-right {
+    justify-self: right;
 }
 
 #card {
@@ -94,6 +106,9 @@ body {
 
 #info {
     font-size: 180%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
 }
 
 #name {
@@ -102,9 +117,15 @@ body {
     overflow: hidden;
 }
 
-#vc-time {
-    display: flex;
+#icon {
+    margin-right: 2%;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    aspect-ratio: 1;
+    filter: invert();
 }
+
 
 #progress {
     display: grid;
