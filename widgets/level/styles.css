@@ -106,8 +106,9 @@ div {
 #info {
     font-size: 150%;
     display: grid;
+    row-gap: 20%;
     align-items: center;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 40% 40%;
     grid-template-columns: 50% 50%;
     padding: 2%;
 }
