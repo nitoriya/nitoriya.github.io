@@ -1,7 +1,3 @@
-// const cards = {
-//     kazuma: 'https://raw.githubusercontent.com/nitoriya/nitoriya.github.io/main/media/cards/kazuma.png',
-//     furina: 'https://raw.githubusercontent.com/nitoriya/nitoriya.github.io/main/media/cards/furina.png',
-// };
 const cards = ["kazuma", "furina"];
 const cards_path = "https://raw.githubusercontent.com/nitoriya/nitoriya.github.io/main/media/cards/";
 
@@ -14,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const avatarUrl = urlParams.get('avatar') || "https://s1.zerochan.net/icons/avatar4.png";
     document.getElementById('avatar').src = avatarUrl;
 
-    const bannerUrl = "https://raw.githubusercontent.com/nitoriya/nitoriya.github.io/main/media/cards/"
-        + (cards.includes(urlParams.get('card')) ? urlParams.get('card') : cards[0]) + ".png";
+    const bannerUrl = cards_path + (cards.includes(urlParams.get('card')) ? urlParams.get('card') : cards[0]) + ".png";
     document.getElementById('card').style.backgroundImage = `url(${bannerUrl})`;
 
     const level1 = (urlParams.get('lvl1') || '0');
