@@ -90,7 +90,8 @@ div {
 
 #header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /*align-items: center;*/
     align-items: center;
     overflow: hidden;
 }
@@ -117,6 +118,7 @@ div {
     font-weight: bold;
     flex-grow: 1;
     font-size: 300%;
+    align-self: normal;
     overflow: hidden;
 }
 

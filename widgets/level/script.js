@@ -4,7 +4,7 @@ const cards_path = "https://raw.githubusercontent.com/nitoriya/nitoriya.github.i
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
 
-    const username = urlParams.get('name') || "Попаданец";
+    const username = urlParams.get('name')|| "Попаданец";
     document.getElementById('name').innerText = username;
 
     const avatarUrl = urlParams.get('avatar') || "https://s1.zerochan.net/icons/avatar4.png";
