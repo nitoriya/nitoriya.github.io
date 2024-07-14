@@ -37,7 +37,7 @@ div {
 .ratio {
     font-size: large;
     margin-left: 0.5%;
-    position: fixed;
+    position: absolute;
     
 }
 
