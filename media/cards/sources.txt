@@ -1,2 +1,3 @@
-kazuma.png - https://gelbooru.com/index.php?page=post&id=5602415
-furina.png - zerochan.net/4005375
+kazuma.png 	- https://gelbooru.com/index.php?page=post&id=5602415
+furina.png 	- zerochan.net/4005375
+miku.png 	- https://gelbooru.com/index.php?page=post&s=view&id=8887050

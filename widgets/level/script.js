@@ -1,4 +1,4 @@
-const cards = ["kazuma", "furina"];
+const cards = ["kazuma", "furina", "miku"];
 const cards_path = "https://raw.githubusercontent.com/nitoriya/nitoriya.github.io/main/media/cards/";
 
 document.addEventListener("DOMContentLoaded", function () {
